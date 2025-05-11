@@ -1,0 +1,164 @@
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 0 20px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.blood-type-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.blood-type-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.blood-type-card:hover {
+    transform: translateY(-5px);
+}
+
+.blood-type {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+
+}
+
+.compatibility-list {
+    margin-top: 1rem;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    align-content: left;
+    align-self: left;
+}
+
+.compatibility-list h4 {
+    color: var(--deep-navy);
+    margin-bottom: 0.5rem;
+    font-size: 0.8em;
+    text-transform: lowercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.can-donate {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.can-receive {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+@media (max-width: 1024px) {
+    .blood-type-card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        transition: transform 0.3s ease;
+        z-index: 1;
+    }
+
+    .compatibility-list .can-donate {
+        color: var(--text-gray);
+        margin-bottom: 0.5rem;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+
+    .compatibility-list .can-receive {
+        color: var(--text-gray);
+        margin-bottom: 0.5rem;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 610px) {
+    .blood-type-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .blood-type-card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 45%;
+        transition: transform 0.3s ease;
+        z-index: 1;
+    }
+
+    .compatibility-list h4 {
+        color: var(--deep-navy);
+        margin-bottom: 0.5rem;
+        font-size: 0.8em;
+        text-transform: lowercase;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+    }
+
+    .compatibility-list .can-donate {
+        color: var(--text-gray);
+        margin-bottom: 0.5rem;
+        font-size: 0.8em;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+
+    .compatibility-list .can-receive {
+        color: var(--text-gray);
+        margin-bottom: 0.5rem;
+        font-size: 0.8em;
+        letter-spacing: 0.05em;
+        text-align: left;
+    }
+}

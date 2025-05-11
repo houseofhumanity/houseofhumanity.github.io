@@ -1,0 +1,411 @@
+body {
+    background-color: var(--background-white);
+    color: var(--text-black);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* Project Categories Tabs */
+.project-categories {
+    padding: 40px 0 20px;
+    background-color: transparent;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.tab-button {
+    padding: 12px 24px;
+    border: none;
+    background-color: var(--light-blue-bg);
+    color: var(--primary-blue);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.tab-button:hover {
+    background-color: var(--sky-blue);
+    color: white;
+}
+
+.tab-button.active {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* Project Grid */
+.projects-grid {
+    padding: 40px 0 80px;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    height: 200px;
+    background-color: var(--light-blue-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-blue);
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-orange);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-details {
+    padding: 25px;
+}
+
+.project-details h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.project-details p {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+}
+
+.location-icon {
+    margin-right: 5px;
+    color: var(--primary-blue);
+}
+
+.view-project a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.view-project span {
+    margin-right: 5px;
+}
+
+/* Common  Styling for all Detail Project Pages*/
+
+/*ABOUT SECTION*/
+.about-project {
+    min-height: 80vh;
+    padding: 0;
+    padding-top: 50px;
+    padding: 5% 10%;
+    background: var(--intro-bg);
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(255, 183, 77, 0.1));
+    transform: skewX(-15deg);
+}
+
+.about-project::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 60%;
+    height: 120%;
+    background: linear-gradient(45deg, transparent, rgba(0, 85, 165, 0.08));
+    transform: skewX(-15deg);
+}
+
+.about-text h3 {
+    color: var(--intro-heading);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+
+/*GLIMPSES SECTION*/
+.project-glimpse {
+    min-height: 100vh;
+    padding: 4rem 5%;
+    background: linear-gradient(45deg, var(--light-blue-bg), #eef4fc);
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.project-glimpse::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 45%;
+    height: 120%;
+    background: linear-gradient(135deg, transparent,
+            rgba(43, 164, 78, 0.08));
+    transform: skewX(-15deg);
+}
+
+.project-glimpse-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-glimpse-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.project-glimpse-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.project-glimpse-item:hover img {
+    transform: scale(1.1);
+}
+
+.project-glimpse-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 1.5rem 1rem;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.project-glimpse-item:hover .project-glimpse-overlay {
+    transform: translateY(0);
+}
+
+.project-glimpse-overlay h4 {
+    margin-bottom: 0.5rem;
+}
+
+.project-glimpse-overlay p {
+    margin-bottom: 0.5rem;
+    color: var(--background-white);
+}
+
+/* Project Detail View Font Styling*/
+.container h2 {
+    font-size: 3.5rem;
+    color: var(--intro-heading);
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-bold);
+    line-height: 1.2;
+    text-align: center;
+    position: relative;
+}
+
+.container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--leaf-green);
+    border-radius: 2px;
+}
+
+
+/*CTA SECTION*/
+.cta-section {
+    min-height: 100vh;
+    padding: 0;
+    padding-top: 50px;
+    padding: 5% 0%;
+    background: var(--intro-bg);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(255, 183, 77, 0.1));
+    transform: skewX(-15deg);
+}
+
+.cta-section::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 60%;
+    height: 120%;
+    background: linear-gradient(45deg, transparent, rgba(0, 85, 165, 0.08));
+    transform: skewX(-15deg);
+}
+
+.cta-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-section h3 {
+    color: var(--intro-heading);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 610px) {
+
+    .container h2 {
+        font-size: 2.5rem;
+        color: var(--intro-heading);
+        margin-bottom: var(--spacing-md);
+        font-weight: var(--font-bold);
+        line-height: 1.2;
+        text-align: center;
+        position: relative;
+    }
+
+    .projects-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .featured-project-container {
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-title h2 {
+        font-size: 2rem;
+    }
+
+    .testimonials,
+    .impact-stats,
+    .support-cta {
+        padding: 30px;
+    }
+
+    .project-detail-content {
+        margin: 10px;
+    }
+}

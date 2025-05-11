@@ -1,0 +1,299 @@
+body {
+    background-color: var(--background-white);
+    color: var(--text-black);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.donate-header {
+    background-color: var(--light-blue-bg);
+    padding: 60px 0;
+    text-align: center;
+    /* margin-bottom: 40px; */
+    border-radius: 8px;
+}
+
+.donate-header h1 {
+    color: var(--primary-blue);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.donate-header p {
+    color: var(--text-gray);
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.details-section {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    flex-direction: row;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: var(--spacing-xl) 0;
+    background-color: var(--background-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.donate-options {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 30px;
+    justify-content: center;
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+.donate-method {
+    background-color: var(--background-white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.donate-method:hover {
+    transform: translateY(-5px);
+}
+
+.method-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.method-icon {
+    background-color: var(--light-blue-bg);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.method-icon i {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+}
+
+.method-header h3 {
+    color: var(--deep-navy);
+    font-size: 1.5rem;
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.qr-code {
+    padding: 10px;
+    background-color: var(--background-white);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-details {
+    background-color: var(--intro-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.bank-details h4 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.bank-details p {
+    margin-bottom: 10px;
+    color: var(--text-black);
+}
+
+.bank-details span {
+    font-weight: 600;
+    color: var(--deep-navy);
+}
+
+.copy-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.copy-btn:hover {
+    background-color: var(--deep-navy);
+}
+
+.tax-info {
+    background-color: var(--light-blue-bg);
+    border-radius: 8px;
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.tax-info h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.tax-info p {
+    color: var(--text-gray);
+}
+
+.donor-form-section {
+    background-color: var(--light-blue-bg);
+    /* padding: 40px; */
+    border-radius: 12px;
+    width: 60%;
+    /* display: flex; */
+    padding: 20px;
+    align-self: center;
+}
+
+.donor-form-section h2 {
+    color: var(--primary-blue);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.donor-form-section p {
+    color: var(--text-gray);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.donor-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--background-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--deep-navy);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
+
+.submit-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: var(--deep-navy);
+}
+
+.thank-you-message {
+    text-align: center;
+    background-color: var(--background-white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.thank-you-message h3 {
+    color: var(--secondary-green);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.thank-you-message p {
+    color: var(--text-gray);
+    margin-bottom: 15px;
+}
+
+@media (max-width: 610px) {
+    .donate-options {
+        flex-direction: column;
+    }
+
+    .donate-method {
+        width: 100%;
+    }
+
+    .impact-stats {
+        flex-direction: column;
+    }
+
+    .details-section {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        background-color: var(--white-80);
+        padding: var(--spacing-xl) 5%;
+        gap: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .donor-form-section {
+        background-color: var(--light-blue-bg);
+        border-radius: 12px;
+        width: 100%;
+        padding: 20px;
+        align-self: center;
+    }
+}

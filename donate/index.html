@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Support House of Humanity's mission by making a donation. Every contribution helps make a difference in people's lives.">
+    <meta name="keywords"
+        content="donate to NGO, charitable donations, support charity, make a difference, humanitarian aid">
+    <meta name="author" content="House of Humanity">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Donate - House of Humanity">
+    <meta property="og:description"
+        content="Support our mission by making a donation. Every contribution helps make a difference.">
+    <meta property="og:image" content="https://placehold.co/1200x630">
+    <meta property="og:url" content="https://houseofhumanity.in/donate">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://houseofhumanity.in/donate">
+    <title>Donate - House of Humanity</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/donate_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">DONATE</h1>
+            <div class="underline"></div>
+            <p class="hero-subtitle">Support our mission by making a donation. Every contribution helps make a
+                difference.</p>
+        </div>
+        <div class="breadcrumb">
+            <a href="/">HOME</a>
+            <span class="separator">/</span>
+            <span class="current">DONATE</span>
+        </div>
+    </section>
+
+    <section class="details-section">
+        <section class="donate-options">
+            <div class="donate-method">
+                <div class="method-header">
+                    <div class="method-icon">
+                        <i class="fab fa-google-pay"></i>
+                    </div>
+                    <h3>Google Pay</h3>
+                </div>
+                <p>Scan the QR code below or use our UPI ID to make a quick and secure donation.</p>
+                <div class="qr-container">
+                    <div class="qr-code">
+                        <!-- Replacing with placeholder image since we can't show actual QR code -->
+                        <img src="../assets/images/payment/hoh_QR.jpg" alt="UPI QR Code" height="200" width="200" />
+                    </div>
+                </div>
+                <div class="bank-details">
+                    <h4>UPI Details</h4>
+                    <p><span>UPI ID:</span> house93135@barodampay</p>
+                    <p><span>Phone Number:</span> +91 9974191811</p>
+                    <button class="copy-btn" onclick="copyToClipboard('house93135@barodampay')">
+                        <i class="fas fa-copy"></i> Copy UPI ID
+                    </button>
+                </div>
+            </div>
+
+            <div class="donate-method">
+                <div class="method-header">
+                    <div class="method-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Bank Transfer</h3>
+                </div>
+                <p>Transfer your donation directly to our bank account using the details below.</p>
+                <div class="bank-details">
+                    <h4>Bank Account Details</h4>
+                    <p><span>Account Name:</span> HOUSE OF HUMANITY CHARITABLE TRUST</p>
+                    <button class="copy-btn" onclick="copyToClipboard('HOUSE OF HUMANITY CHARITABLE TRUST')">
+                        <i class="fas fa-copy"></i> Copy Account Name
+                    </button>
+                    <p><span>Account Number:</span> 1234567890</p>
+                    <button class="copy-btn" onclick="copyToClipboard('1234567890')">
+                        <i class="fas fa-copy"></i> Copy Account Number
+                    </button>
+                    <p><span>IFSC Code:</span> ABCD0123456</p>
+                    <button class="copy-btn" onclick="copyToClipboard('ABCD0123456')">
+                        <i class="fas fa-copy"></i> Copy IFSC Code
+                    </button>
+                    <p><span>Bank Name:</span> Bank of Baroda</p>
+                    <p><span>Branch:</span> Main Branch, Baroda</p>
+                </div>
+            </div>
+        </section>
+        <section class="donor-form-section">
+            <h2>Complete Your Donation</h2>
+            <p>Please provide your details to help us track your donation accurately, express our gratitude, and stay
+                connected.</p>
+            <form id="donorForm" class="donor-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number *</label>
+                    <input type="tel" id="mobile" name="phnumber" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Donation Amount (₹) *</label>
+                    <input type="number" id="amount" name="amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="motive">Donation Motive</label>
+                    <select id="motive" name="motive">
+                        <option value="general">General Support</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="death_anniversary">Death Anniversary</option>
+                        <option value="festival">Festival</option>
+                        <option value="community">Community Development</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="otherMotiveGroup" style="display: none;">
+                    <label for="otherMotive">Please Specify</label>
+                    <input type="text" id="otherMotive" name="otherMotive">
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Details</button>
+            </form>
+
+            <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+                <h3>Thank You for Your Donation!</h3>
+                <p>Your contribution makes a significant impact. We'll reach out to you soon.</p>
+            </div>
+            <section class="tax-info">
+                <h3>Tax Benefits</h3>
+                <p>All donations to House of Humanity are eligible for tax deduction under Section 80G. You will receive
+                    a
+                    donation receipt for tax purposes.</p>
+            </section>
+        </section>
+    </section>
+    </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

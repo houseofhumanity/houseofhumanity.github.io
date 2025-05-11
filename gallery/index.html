@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore our gallery of impactful moments and events from House of Humanity's journey in making a difference.">
+    <meta name="keywords" content="NGO gallery, charity events, humanitarian work, community impact, photo gallery">
+    <meta name="author" content="House of Humanity">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Gallery - House of Humanity">
+    <meta property="og:description"
+        content="Explore our gallery of impactful moments and events from our journey in making a difference.">
+    <meta property="og:image" content="https://placehold.co/1200x630">
+    <meta property="og:url" content="https://houseofhumanity.in/gallery">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://houseofhumanity.in/gallery">
+    <title>Gallery - House of Humanity</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/gallery_style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Gallery</h1>
+            <div class="underline"></div>
+            <p class="hero-subtitle">A visual journey through our work, capturing the faces, places and transformative
+                moments that define our mission.</p>
+        </div>
+        <div class="breadcrumb">
+            <a href="/">HOME</a>
+            <span class="separator">/</span>
+            <span class="current">GALLERY</span>
+        </div>
+    </section>
+
+    <div class="gallery-grid" id="galleryGrid">
+        <!-- Gallery images will be loaded dynamically -->
+    </div>
+
+    <button class="load-more" id="loadMoreBtn">Load More</button>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <img src="" alt="Gallery image" class="lightbox-img" id="lightboxImg">
+            <div class="lightbox-nav">
+                <div class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></div>
+                <div class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="js/gallery_script.js"></script>
+</body>
+
+</html>
